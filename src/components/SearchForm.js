@@ -1,5 +1,5 @@
 import React from "react";
-
+//handleInputChange will filter the employees by last name or first name
 function SearchForm(props) {
   return (
     <form>
@@ -14,9 +14,6 @@ function SearchForm(props) {
           placeholder="Search for a Gif"
           id="search"
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
-          Search
-        </button>
       </div>
     </form>
   );
