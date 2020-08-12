@@ -6,6 +6,7 @@ import API from "../utils/API";
 class SearchResultContainer extends Component {
   state = {
     search: "",
+    sort: "",
     results: []
   };
 
@@ -19,22 +20,31 @@ class SearchResultContainer extends Component {
       .then(res => this.setState({ results: res.data.data }))
       .catch(err => console.log(err));
   };
+
 //will handle the filtering of first or last name
-  handleInputChange = event => {
-    const name = event.target.name;
+  handleInputChange = (event) => {
+    event.preventDefault();
     const value = event.target.value;
     this.setState({
-      [name]: value
+      search: value
     });
   };
 
-  // When the form is submitted, search the Giphy API for `this.state.search`
-  handleFormSubmit = event => {
-    event.preventDefault();
-    this.searchDirectory(this.state.search);
+  //sorting names function
+  sortList = () => {
+    if (this.state.sort === "descending" || 
+      this.state.sort !== "ascending") 
+      { this.setState({ sort: "ascending" });
+    } else if (this.state.sort === "ascending" ||
+      this.state.sort !== "descending") 
+    {
+        this.setState({ sort: "descending" });
+    } 
   };
+  
 
   render() {
+
     return (
       <div>
         <SearchForm

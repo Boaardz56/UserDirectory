@@ -2,17 +2,16 @@ import React from "react";
 //handleInputChange will filter the employees by last name or first name
 function SearchForm(props) {
   return (
-    <form>
+    <form className="text-center">
       <div className="form-group">
         <label htmlFor="search">Search:</label>
         <input
-          onChange={props.handleInputChange}
-          value={props.search}
+          onChange={this.handleInputChange.bind(this)}
+          value={this.state.search}
           name="search"
           type="text"
-          className="form-control"
-          placeholder="Search for a Gif"
-          id="search"
+          className="text-center"
+          placeholder="Search by Last Name"
         />
       </div>
     </form>
