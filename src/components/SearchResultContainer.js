@@ -10,14 +10,18 @@ class SearchResultContainer extends Component {
     results: []
   };
 
-  // When this component mounts, search the Giphy API for pictures of kittens
+  
   componentDidMount() {
     this.searchDirectory("search");
   }
 
   searchDirectory = query => {
     API.search(query)
-      .then(res => this.setState({ results: res.data.data }))
+      .then(res => 
+        {
+          console.log("Table results", res)
+          this.setState({ results: res.data.results })
+        })
       .catch(err => console.log(err));
   };
 
@@ -45,7 +49,7 @@ class SearchResultContainer extends Component {
   
 
   render() {
-
+    console.log("Results", this.state.results)
     return (
       <div>
         <SearchForm
