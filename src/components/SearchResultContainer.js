@@ -25,22 +25,23 @@ class SearchResultContainer extends Component {
   handleInputChange = (event) => {
     event.preventDefault();
     const value = event.target.value;
+    console.log("This is the value", value)
     this.setState({
       search: value
     });
   };
 
-  //sorting names function
-  sortList = () => {
-    if (this.state.sort === "descending" || 
-      this.state.sort !== "ascending") 
-      { this.setState({ sort: "ascending" });
-    } else if (this.state.sort === "ascending" ||
-      this.state.sort !== "descending") 
-    {
-        this.setState({ sort: "descending" });
-    } 
-  };
+  // //sorting names function
+  // sortList = () => {
+  //   if (this.state.sort === "descending" || 
+  //     this.state.sort !== "ascending") 
+  //     { this.setState({ sort: "ascending" });
+  //   } else if (this.state.sort === "ascending" ||
+  //     this.state.sort !== "descending") 
+  //   {
+  //       this.setState({ sort: "descending" });
+  //   } 
+  // };
   
 
   render() {
