@@ -2,18 +2,16 @@ import React from "react";
 
 function ResultList(props) {
   return (
-    <div>
-    <h1>Page loaded</h1>
-    <div>
+     <div>
       <table className="table table-striped">
         <thead>
           <tr>
             <th> Picture </th>
-            {props.results.map(result => (
+            {/* {props.results.map(result => (
             <th scope="col" className="img-container" key={result.id}>
               <img alt={result} className="img-fluid" src={result.picture.medium} />
             </th>
-            ))}
+            ))} */}
             <th id="name">First Name</th>
             <th scope="col">
               {/* <button className="btn-info" onClick={this.sortList} type="button"> Last Name</button> */}
@@ -52,8 +50,7 @@ function ResultList(props) {
         </tbody>
       </table>
     </div>
-    </div>
-    );
+  );
 }
 
 
