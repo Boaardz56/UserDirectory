@@ -1,7 +1,7 @@
 import React from "react";
 
 function ResultList(props) {
-  console.log("What is props", props.results)
+  // console.log("What is props", props.results)
   return (
      <div>
       <table className="table table-striped">
@@ -9,9 +9,8 @@ function ResultList(props) {
           <tr>
             <th> Picture </th>
             <th id="name">First Name</th>
-            <th scope="col">
+            <th scope="col" onClick={props.sortList}>
               Last Name
-              {/* <button className="btn-info" onClick={this.sortList} type="button"> Last Name</button> */}
             </th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
@@ -19,16 +18,11 @@ function ResultList(props) {
 
           </tr>
         </thead>
-        {/* {props.results.map(result => (
-            <th scope="col" className="img-container" key={result.id}>
-              <img alt={result} className="img-fluid" src={result.picture.medium} />
-            </th>
-            ))} */}
         <tbody>
-          {props.results.map(function (item) {
-            console.log("What is item", item)
+          {props.results.map(function (item, i) {
+            // console.log("What is item", item)
             return (
-              <tr>
+              <tr key={i}>
                 <td>
                   <img src={item.picture.medium} />
                 </td>
