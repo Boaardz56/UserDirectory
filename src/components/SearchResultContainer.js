@@ -50,7 +50,7 @@ class SearchResultContainer extends Component {
       this.state.sort !== "descending") {
       this.setState({ sort: "descending" });
       let descendingSort = this.state.results.sort((a, b) => b.name.last.localeCompare(a.name.last))
-      console.log("what is descending", descendingSort)
+      // console.log("what is descending", descendingSort)
       this.setState({ results: descendingSort })
     }
   };
@@ -58,6 +58,7 @@ class SearchResultContainer extends Component {
 
   render() {
     console.log(this.state)
+    
     return (
       <div>
         <SearchForm
@@ -67,6 +68,7 @@ class SearchResultContainer extends Component {
         />
         <ResultList
           results={this.state.results}
+          search={this.state.search}
           sortList={this.sortList}
         />
       </div>

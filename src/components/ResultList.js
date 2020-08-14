@@ -1,7 +1,8 @@
 import React from "react";
 
 function ResultList(props) {
-  // console.log("What is props", props.results)
+  console.log("What is props", props.search)
+  const findEmp = props.results.filter(employee =>employee.name.last.toLowerCase().includes(props.search.toLowerCase()))
   return (
      <div>
       <table className="table table-striped">
@@ -18,9 +19,9 @@ function ResultList(props) {
 
           </tr>
         </thead>
-        <tbody>
-          {props.results.map(function (item, i) {
-            // console.log("What is item", item)
+         <tbody>
+          {/* filter out search text against results list, loop through list to pull last name we are looking for*/}
+           {findEmp?.map(function (item, i) {
             return (
               <tr key={i}>
                 <td>
