@@ -21,6 +21,7 @@
   * React
   * Bootstrap
 
+  [GitHubPages](https://boaardz56.github.io/UserDirectory/)
 
   ![Gif](./public/UserDirectoryGIF.gif)
       
