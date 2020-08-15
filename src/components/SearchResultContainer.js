@@ -43,15 +43,23 @@ class SearchResultContainer extends Component {
     if (this.state.sort === "descending" ||
       this.state.sort !== "ascending") {
       this.setState({ sort: "ascending" });
-      let ascendingSort = this.state.results.sort((a, b) => a.name.last.localeCompare(b.name.last))
-      // console.log("Ascending list", ascendingSort)
-      this.setState({ results: ascendingSort })
+      //sorting by last name
+      let ascendingSortLast = this.state.results.sort((a, b) => a.name.last.localeCompare(b.name.last))
+      this.setState({ results: ascendingSortLast }) 
+      // //sorting by first name
+      // let ascendingSortFirst = this.state.results.sort((a, b) => a.name.first.localeCompare(b.name.first))
+      // // console.log("Ascending list", ascendingSort)
+      // this.setState({ results: ascendingSortFirst })
     } else if (this.state.sort === "ascending" ||
       this.state.sort !== "descending") {
       this.setState({ sort: "descending" });
-      let descendingSort = this.state.results.sort((a, b) => b.name.last.localeCompare(a.name.last))
-      // console.log("what is descending", descendingSort)
-      this.setState({ results: descendingSort })
+      //sorting by last name
+      let descendingSortLast = this.state.results.sort((a, b) => b.name.last.localeCompare(a.name.last))
+      this.setState({ results: descendingSortLast })
+      //sorting by first name
+      // let descendingSortFirst = this.state.results.sort((a, b) => b.name.first.localeCompare(a.name.first))
+      // // console.log("what is descending", descendingSort)
+      // this.setState({ results: descendingSortFirst })
     }
   };
 
