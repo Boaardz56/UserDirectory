@@ -25,3 +25,7 @@ td {
 img {
     border-radius: 2px;
 }
+
+#sortIcon {
+    margin-left: 10px;
+}

@@ -10,8 +10,8 @@ function ResultList(props) {
           <tr>
             <th scope="col"> Picture </th>
             <th scope="col-3">First Name</th>
-            <th scope="col-3"onClick={props.sortList}>Last Name
-              <i class="fas fa-sort"></i></th>
+            <th scope="col-3">Last Name
+              <i className="fas fa-sort" onClick={props.sortList} id="sortIcon"></i></th>
             <th scope="col-3">Email</th>
             <th scope="col">Phone</th>
             <th scope="col-2">Age</th>
