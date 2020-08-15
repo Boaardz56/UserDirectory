@@ -17,7 +17,7 @@
   ## Usage 
 
   > Application utilizing:
-  * Creat-React-App
+  * Create-React-App
   * React
   * Bootstrap
 
